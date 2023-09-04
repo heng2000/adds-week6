@@ -13,13 +13,13 @@ void QuickSort::quicksort(std::vector<int>& list, int left, int right) {
     int pivot = list[right];
     int left_number = left;
 
-    for (int j = left_number; j < right; j++) {
+    for (int j = left; j < right; j++) {
         if (list[j] <= pivot) {
             std::swap(list[left_number], list[j]);
             left_number++;
         }
     }
-    if (left_number >= right) {
+    if (left >= right) {
         return;
     }
 
